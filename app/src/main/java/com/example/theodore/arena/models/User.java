@@ -2,6 +2,7 @@ package com.example.theodore.arena.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.support.annotation.NonNull;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -47,11 +48,11 @@ public class User implements Parcelable {
         }
     }
 
-    String username;
-    String email;
-    String password;
-    Language language;
-    HashSet<Subject> subjects;
+    @NonNull String username = "";
+    @NonNull String email = "";
+    @NonNull String password = "";
+    @NonNull Language language = Language.KAZ;
+    @NonNull HashSet<Subject> subjects = new HashSet<>();
 
     public User() {}
 

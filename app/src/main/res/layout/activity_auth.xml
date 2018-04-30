@@ -1,93 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.theodore.arena.AuthActivity"
-    android:orientation="vertical">
+    android:fitsSystemWindows="false"
+    tools:context="com.example.theodore.arena.AuthActivity">
+
+    <ImageView
+        android:id="@+id/background_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/auth_background" />
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="7">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/logo_image_view"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:src="@drawable/ic_logo"
-            android:layout_width="120dp"
-            android:layout_height="120dp" />
+            app:layout_constraintDimensionRatio="W,36:85"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/logo_image_view"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal">
-
-            <TextView
-                android:textSize="36sp"
-                android:text="Arena"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:textSize="25sp"
-                android:text="В путь знания"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-        </LinearLayout>
-
-    </android.support.constraint.ConstraintLayout>
-
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4">
-
-        <LinearLayout
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_width="300dp"
-            android:padding="16dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal">
-
-            <Button
-                android:foreground="?android:attr/selectableItemBackground"
-                android:textColor="@android:color/white"
-                android:background="@drawable/button"
-                android:textSize="15sp"
-                android:textAllCaps="false"
-                android:paddingTop="15dp"
-                android:paddingBottom="15dp"
-                android:text="Зарегистрироваться"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <Button
-                style="?android:attr/borderlessButtonStyle"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:layout_marginTop="20dp"
-                android:textAllCaps="false"
-                android:textSize="16sp"
-                android:text="Войти"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="7">
 
-        </LinearLayout>
+                    <ImageView
+                        android:id="@+id/logo_image_view"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:src="@drawable/ic_logo"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp" />
+
+                    <LinearLayout
+                        app:layout_constraintVertical_bias="0.35"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/logo_image_view"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:textSize="36sp"
+                            android:text="Arena"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:textSize="25sp"
+                            android:text="В путь знания"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4">
+
+                    <LinearLayout
+                        app:layout_constraintVertical_bias="0.2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <Button
+                            android:id="@+id/register_button"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/button"
+                            android:textSize="15sp"
+                            android:textAllCaps="false"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:text="Зарегистрироваться"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <Button
+                            android:id="@+id/login_button"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:layout_marginTop="20dp"
+                            android:textAllCaps="false"
+                            android:textSize="16sp"
+                            android:text="Войти"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
 
     </android.support.constraint.ConstraintLayout>
 
-</LinearLayout>
+</FrameLayout>

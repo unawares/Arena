@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Arena</string>
+    <string name="user_key">user</string>
 </resources>
